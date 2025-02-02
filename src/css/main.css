@@ -1,0 +1,73 @@
+body{
+    background-color: aquamarine;
+}
+#calc-container{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-content: center;
+    width: 40vh;
+    height: 60vh;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #1C1C1C;
+}
+#input-log{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 30px;
+    color: #D4D4D2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 90%;
+    height: 10vh;
+
+    display: block; 
+    word-wrap: break-word;  
+    overflow-wrap: break-word;  
+    white-space: normal;
+    overflow: hidden;
+}
+#calc-number-holder{    
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-left: 1vh;
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+.calc-button, .calc-button-equals{
+    border: none;
+    background-color: #505050;
+    display: flex;
+    color: #D4D4D2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    transition: filter 0.1s ease, transform 0.1s ease;
+}
+.calc-button:nth-child(4),
+.calc-button:nth-child(8),
+.calc-button:nth-child(12),
+.calc-button:nth-child(15),
+.calc-button:nth-child(16){
+    background-color: #FF9500;
+}
+#equals{
+    grid-column: 3 / 5;
+    grid-row: 5;
+    width: 120px;
+    background-color: #FF9500;  
+}   
+.calc-button:active, .calc-button-equals:active{
+    filter: brightness(150%);
+    transform: scale(0.98);
+}
