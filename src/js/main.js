@@ -2,10 +2,17 @@ const BUTTONS = document.querySelectorAll('.calc-button');
 const EQUALS = document.getElementById('equals');
 const CLEAR = document.getElementById('AC')
 let output = document.getElementById('input-log');
-let result = null;
+const SIGNS = ["-", "+", "/", "*", "=", "."];
 
 BUTTONS.forEach((button)=>{
     button.addEventListener('click', function(){
+        let lastChar = output.textContent.slice(-1);
+        // check for adding few signs together
+        if (SIGNS.includes(button.textContent)){
+            if(SIGNS.includes(lastChar)){
+                return;
+            }
+        }
         output.textContent += button.textContent;
     })
 })
